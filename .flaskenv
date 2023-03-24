@@ -5,4 +5,4 @@ FLASK_RUN_HOST=0.0.0.0
 MYSQL_IP='34.132.111.250'
 MYSQL_USER='root'
 MYSQL_PASS='password'
-MYSQL_DB='population'
+MYSQL_DB='Code-X'
