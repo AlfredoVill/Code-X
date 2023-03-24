@@ -16,11 +16,13 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # authenticated user
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64), unique=True)
+    name = db.Column(db.String(64))
+    last_name = db.Column(db.String(64))
     email = db.Column(db.String(64), unique=True)
-    role = db.Column(db.String(64))
+    phone = db.Column(db.Integer(64))
+    disciplinary_status = db.Column(db.String(64))
+    user_type = db.Column(db.String(64))
     password_hash = db.Column(db.String(256), unique=True)
-
     def set_password(self, password):
         # Store hashed (encrypted) password in database
         self.password_hash = generate_password_hash(password)
