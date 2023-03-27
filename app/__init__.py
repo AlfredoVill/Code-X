@@ -38,10 +38,10 @@ from app import routes, models
 from app.models import User
 
 # Create DB schema
-db.create_all()
+#db.create_all()
 
 # Create admin and basic user account
-user = User.query.filter_by(username='admin').first()
+'''user = User.query.filter_by(username='admin').first()
 if user is None:
     user_admin = User(username='admin', role='admin')
     user_admin.set_password('csc330')
@@ -54,3 +54,4 @@ if user is None:
     reg_user.set_password('csc330')
     db.session.add(reg_user)
     db.session.commit()
+'''
